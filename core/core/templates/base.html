@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %}Template{% endblock %}</title>
+
+  {% include 'base/styles.html' %}
+  {% block style %}{% endblock style %}
+</head>
+
+<body data-bs-theme="light">
+  <div class="page">
+    <!--Navbar-->
+    {% include 'base/header.html' %}
+    <div class="page-wrppper">
+      <!--Page header-->
+      <div class="page-header d-print-none">
+        <div class="container-xl">
+          <div class="row g-2 align-items-center">
+            <div class="col">
+              <!-- Page pre-title -->
+              <div class="page-pretitle">
+                {% block pre_title %}{% endblock pre_title %}
+              </div>
+              <h2 class="page-title">
+                {% block title %}{% endblock title %}
+              </h2>
+            </div>
+            <!-- Page title actions -->
+            <div class="col-auto ms-auto d-print-none">
+              <div class="btn-list">
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% block content %} {% endblock %}
+    </div>
+  </div>
+  {% include 'base/scripts.html' %}
+  {% block js %} {% endblock %}
+</body>
+
+</html>
