@@ -15,7 +15,6 @@ function toggleTheme() {
     if (currentTheme == 'auto') {
         currentTheme = (userPrefersDark ? 'dark' : 'light')
     }
-    console.log(currentTheme)
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);

@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ status }} - {{ status_message }}</title>
+    {% include 'base/styles.html' %}
+</head>
+
+<body class=" border-top-wide border-primary d-flex flex-column" data-new-gr-c-s-check-loaded="9.66.0"
+    data-gr-ext-installed="">
+
+    <div class="page page-center">
+        <div class="container-tight py-4">
+            <div class="empty">
+                <div class="empty-header">{{ status }}</div>
+                <p class="empty-title">{{status_message }}</p>
+                <p class="empty-subtitle text-muted">
+                    {{ error_message }}
+                </p>
+                <div class="empty-action">
+                    <a href="./." class="btn btn-primary">
+                        {% include 'icons/arrow_left.svg' %}
+                        Take me home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Libs JS -->
+    <!-- Tabler Core -->
+    {% include 'base/scripts.html' %}
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
